@@ -1,0 +1,187 @@
+        /* Общие стили */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Стили для хедера */
+        header {
+            background-color: #0a1f44;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        /* Логотип */
+        .logo img {
+            height: 50px; /* Фиксированная высота */
+            width: auto;  /* Сохранение пропорций */
+            max-width: 100%; /* Предотвращает выход за границы */
+        }
+
+        @media (max-width: 320px) {
+            .catalog-button, .main-button {
+                font-size: 13px; /* Устанавливаем размер шрифта для кнопок */
+                font-weight: 500;
+            }
+
+            .logo img {
+                height: 40px; /* Уменьшаем размер, но не даем сжиматься слишком сильно */
+            }
+        }
+
+        .description {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin: 0 20px;
+        }
+
+        /* Скрываем текст при ширине экрана 320px и меньше */
+        @media (max-width: 700px) {
+            .description {
+                display: none;
+            }
+        }
+
+        /* Стили для навигации */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+        }
+
+        /* Каталог-кнопка (зелёного цвета) */
+        .catalog-button {
+            padding: 12px 24px;
+            background-color: rgb(0, 190, 0);
+            color: white;
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
+
+        .catalog-button:hover {
+            background-color: rgb(0, 150, 0);
+        }
+
+        .background {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: url('/assets/background.png') no-repeat center 0px/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .content {
+            position: relative;
+            text-align: center;
+            color: white;
+            z-index: 1;
+        }
+        .content h1 {
+            font-family: 'Franklin Gothic Medium';
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .content p {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            max-width: 600px;
+            margin: 30px auto;
+        }
+
+/* Адаптация для экранов меньше 1024px */
+@media (max-width: 1024px) {
+    .content h1 {
+        font-size: 2.5rem;
+    }
+    .content p {
+        font-size: 1.3rem;
+    }
+}
+
+/* Адаптация для планшетов (меньше 768px) */
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 2rem;
+    }
+    .content p {
+        font-size: 1.2rem;
+        max-width: 90%;
+    }
+}
+
+/* Адаптация для мобильных устройств (меньше 480px) */
+@media (max-width: 480px) {
+    .background {
+        height: 100vh;
+        background-position: center;
+    }
+    .content h1 {
+        font-size: 1.8rem;
+    }
+    .content p {
+        font-size: 1rem;
+        margin: 20px auto;
+    }
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+.btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    color: white;
+    background-color: #1eb300;
+    border: none;
+    border-radius: 25px;    
+    cursor: pointer;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+
+.btn-2 {
+    padding: 12px 24px;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border: none;
+    border-radius: 25px;    
+    cursor: pointer;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+
+.btn:hover, .btn-2:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 500px) {
+    .buttons {
+        flex-direction: column;
+        gap: 15px;
+        margin: 15px;
+    }
+}
